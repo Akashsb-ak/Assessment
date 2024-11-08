@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>BOGO Offer</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <div class="card">
+                <div class="header">
+                    <div class="line-before"></div>
+
+                    <div class="heading">YAY! It’s BOGO</div>
+                    <div class="line-after"></div>
+                </div>
+
+                <div class="js">
+                    <div class="radio1">
+                        <div class="right">
+                            <input type="radio" id="html" name="fav_language" value="HTML" />
+                            <label for="html">1 Unit <span>10% Off</span></label><br />
+                            <p class="sp">Standard Price</p>
+
+                            <div class="js1">
+                                <p class="sc"><span id="size" style="margin-left: 32px;">Size</span> <span id="color" style="margin-left: 22px;">Color</span></p>
+                                <p><span id="one">#1</span> <button class="dropdown-button">S</button> <button class="dropdown-button" style="margin-left: 7px;">Black</button></p>
+                                <p style="margin-top: 7.23px;"><span id="one">#2</span> <button class="dropdown-button">S</button> <button class="dropdown-button" style="margin-left: 7px;">Black</button></p>
+                            </div>
+                        </div>
+                        <div class="left">
+                            <p class="p1">$10.00 USD</p>
+                            <p class="l2"><s>$24.00 USD</s></p>
+                        </div>
+                    </div>
+
+                    <div class="radio1" style="background-color: #fff9fa; border: 2px solid #ff6b82;">
+                        <div class="right">
+                            <input type="radio" id="html" name="fav_language" value="HTML" />
+                            <div class="badge">
+                                <div class="badgetxt">MOST POPULAR</div>
+                            </div>
+
+                            <label for="html">2 Unit <span>20% Off</span></label>
+
+                            <div class="js1">
+                                <p class="sc"><span id="size" style="margin-left: 32px;">Size</span> <span id="color" style="margin-left: 22px;">Color</span></p>
+                                <p><span id="one">#1</span> <button class="dropdown-button">S</button> <button class="dropdown-button" style="margin-left: 7px;">Black</button></p>
+                                <p style="margin-top: 7.23px;"><span id="one">#2</span> <button class="dropdown-button">S</button> <button class="dropdown-button" style="margin-left: 7px;">Black</button></p>
+                            </div>
+                        </div>
+                        <div class="left">
+                            <p class="p1">$18.00 USD</p>
+                            <p class="l2"><s>$24.00 USD</s></p>
+                        </div>
+                    </div>
+
+                    <div class="radio1">
+                        <div class="right">
+                            <input type="radio" id="html" name="fav_language" value="HTML" />
+                            <label for="html">3 Unit <span>30% Off</span></label>
+
+                            <div class="js1">
+                                <p class="sc"><span id="size" style="margin-left: 32px;">Size</span> <span id="color" style="margin-left: 22px;">Color</span></p>
+                                <p><span id="one">#1</span> <button class="dropdown-button">S</button> <button class="dropdown-button" style="margin-left: 7px;">Black</button></p>
+                                <p style="margin-top: 7.23px;"><span id="one">#2</span> <button class="dropdown-button">S</button> <button class="dropdown-button" style="margin-left: 7px;">Black</button></p>
+                            </div>
+                        </div>
+                        <div class="left">
+                            <p class="p1">$24.00 USD</p>
+                            <p class="l2"><s>$24.00 USD</s></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="free">
+                    <p class="fd">Free Delivery</p>
+                    <p class="tot">Total : $18.00 USD</p>
+                </div>
+
+                <div class="btn">
+                    <a href="#0">+ Add to Cart</a>
+                </div>
+
+                <div class="ft">
+                    <p>@ Powered by Pumper</p>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            const radios = document.querySelectorAll('input[type="radio"]');
+
+            radios.forEach((radio) => {
+                radio.addEventListener("change", () => {
+                    document.querySelectorAll(".radio1").forEach((radioDiv) => {
+                        const js1Section = radioDiv.querySelector(".js1");
+                        if (radioDiv.contains(radio) && radio.checked) {
+                            js1Section.style.display = "block";
+                        } else {
+                            js1Section.style.display = "none";
+                        }
+                    });
+                });
+            });
+
+            document.querySelectorAll(".js1").forEach((section) => (section.style.display = "none"));
+        </script>
+    </body>
+</html>
